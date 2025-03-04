@@ -5,10 +5,15 @@ from datetime import datetime
 import statistics
 import json
 from collections import defaultdict
+import os
+import glob
 
 def run_single_experiment(duration=60, experiment_id=1):
     """Run a single experiment for specified duration"""
     print(f"\nStarting Experiment #{experiment_id} (Duration: {duration}s)")
+    
+    # Clear old logs before starting new experiment
+    clear_old_logs()
     
     # Start the system
     process = subprocess.Popen(['python', 'main.py'], 
@@ -138,6 +143,18 @@ def analyze_machine_log(machine_id):
     }
     
     return stats
+
+def clear_old_logs():
+    """Clear any existing log files"""
+    import os
+    import glob
+    
+    # Remove all machine_*.log files
+    for log_file in glob.glob("machine_*.log"):
+        try:
+            os.remove(log_file)
+        except Exception as e:
+            print(f"Error removing {log_file}: {e}")
 
 def print_experiment_results(results):
     """Print detailed analysis of experiment results"""

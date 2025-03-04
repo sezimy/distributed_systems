@@ -3,7 +3,6 @@ import threading
 import time
 import signal
 import sys
-import random
 
 def cleanup_ports():
     """Cleanup any processes using our ports"""
@@ -15,37 +14,21 @@ def cleanup_ports():
         except:
             pass
 
-def create_virtual_machines(config='default'):
-    """Create virtual machines with different configurations"""
-    if config == 'small_variation':
-        # Smaller clock rate variation (1-3 instead of 1-6)
-        clock_rates = [random.randint(1, 3) for _ in range(3)]
-    else:
-        # Default: larger variation
-        clock_rates = [random.randint(1, 6) for _ in range(3)]
-        
-    ports = [5001, 5002, 5003]
-    machines = []
-    
-    for i in range(3):
-        machine = VirtualMachine(
-            machine_id=i+1,
-            port=ports[i],
-            other_ports=[p for p in ports if p != ports[i]],
-            clock_rate=clock_rates[i]
-        )
-        machines.append(machine)
-    
-    return machines
-
 def main():
     # Cleanup any existing processes
     cleanup_ports()
     
-    print("Initializing virtual machines...")
-    config = sys.argv[1] if len(sys.argv) > 1 else 'default'
-    machines = create_virtual_machines(config)
+    # Define ports for three virtual machines
+    ports = [5001, 5002, 5003]
+    machines = []
     
+    print("Initializing virtual machines...")
+    # Create and start virtual machines
+    for i in range(3):
+        other_ports = [p for p in ports if p != ports[i]]
+        vm = VirtualMachine(i + 1, ports[i], other_ports)
+        machines.append(vm)
+        
     print("\nEstablishing connections between machines...")
     # Start each machine in a separate thread with a small delay
     threads = []
