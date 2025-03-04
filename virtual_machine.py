@@ -178,11 +178,17 @@ class VirtualMachine:
         # Check if there's a message in the queue
         try:
             message = self.message_queue.get_nowait()
+            # Get local clock before update for jump calculation
+            local_clock = self.logical_clock
             # Update logical clock based on received message
             self.update_logical_clock(message['clock'])
-            # Log the receive event
+             # Calculate clock drift
+            drift = self.logical_clock - local_clock - 1
+            # Log the receive event with clock jump details
             self.logger.info(
-                f"Machine {self.machine_id} RECEIVED message - Queue Length: {self.message_queue.qsize()} - Logical Clock: {self.logical_clock}"
+                f"Machine {self.machine_id} RECEIVED message from Machine {message['sender']}| Queue Length: {self.message_queue.qsize()} | "
+                f"Local Clock: {local_clock}, Sender Clock: {message['clock']}, New Clock: {self.logical_clock} "
+                f"(Drift: {drift})"
             )
         except queue.Empty:
             # No message in queue, generate random event
