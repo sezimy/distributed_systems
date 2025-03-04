@@ -182,7 +182,7 @@ class VirtualMachine:
             local_clock = self.logical_clock
             # Update logical clock based on received message
             self.update_logical_clock(message['clock'])
-             # Calculate clock drift
+            # Calculate clock drift
             drift = self.logical_clock - local_clock - 1
             # Log the receive event with clock jump details
             self.logger.info(
@@ -192,8 +192,9 @@ class VirtualMachine:
             )
         except queue.Empty:
             # No message in queue, generate random event
-            action = random.randint(1, 10)
-            if 1 <= action <= 3:
+            # Lower probability of internal events (1-5 instead of 1-10)
+            action = random.randint(1, 5)
+            if 1 <= action <= 3:  # 60% chance of sending (was 30%)
                 # Send message cases
                 target_ports = []
                 if action == 1:
@@ -209,7 +210,7 @@ class VirtualMachine:
                 self.logger.info(
                     f"Machine {self.machine_id} SENT message to machines {target_machines} - Logical Clock: {self.logical_clock}"
                 )
-            else:
+            else:  # 40% chance of internal event (was 70%)
                 # Internal event
                 self.update_logical_clock()
                 self.logger.info(
