@@ -229,3 +229,56 @@ System Time: 2025-03-04 00:23:24,704 - Event: Machine 1 RECEIVED message from Ma
 System Time: 2025-03-04 00:23:24,704 - Event: Machine 1 RECEIVED message from Machine 3| Queue Length: 0 | Local Clock: 357, Sender Clock: 359, New Clock: 360 (Drift: 2)
 System Time: 2025-03-04 00:23:24,704 - Event: Machine 1 INTERNAL EVENT - Logical Clock: 361
 System Time: 2025-03-04 00:23:24,704 - Event: Machine 1 INTERNAL EVENT - Logical Clock: 362
+System Time: 2025-03-04 21:02:50,977 - Event: Machine 1 initialized with clock rate: 2 ticks/second
+System Time: 2025-03-04 21:02:50,995 - Event: Machine 1 initialized with clock rate: 6 ticks/second
+System Time: 2025-03-04 21:02:50,996 - Event: Machine 1 initialized with clock rate: 6 ticks/second
+System Time: 2025-03-04 21:02:50,997 - Event: Machine 1 initialized with clock rate: 3 ticks/second
+System Time: 2025-03-04 21:02:50,998 - Event: Machine 1 initialized with clock rate: 2 ticks/second
+System Time: 2025-03-04 21:02:50,998 - Event: Machine 1 initialized with clock rate: 1 ticks/second
+System Time: 2025-03-04 21:02:50,999 - Event: Machine 1 initialized with clock rate: 2 ticks/second
+System Time: 2025-03-04 21:02:51,000 - Event: Machine 1 initialized with clock rate: 5 ticks/second
+System Time: 2025-03-04 21:05:39,750 - Event: Machine 1 initialized with clock rate: 5 ticks/second
+System Time: 2025-03-04 21:05:40,756 - Event: Machine 1 established connection with Machine 2
+System Time: 2025-03-04 21:05:40,757 - Event: Machine 1 established connection with Machine 3
+System Time: 2025-03-04 21:05:40,779 - Event: Machine 1 initialized with clock rate: 2 ticks/second
+System Time: 2025-03-04 21:05:40,781 - Event: Machine 1 initialized with clock rate: 2 ticks/second
+System Time: 2025-03-04 21:05:40,782 - Event: Machine 1 initialized with clock rate: 6 ticks/second
+System Time: 2025-03-04 21:05:40,782 - Event: Machine 1 initialized with clock rate: 6 ticks/second
+System Time: 2025-03-04 21:05:40,783 - Event: Machine 1 initialized with clock rate: 6 ticks/second
+System Time: 2025-03-04 21:06:28,715 - Event: Machine 1 initialized with clock rate: 1 ticks/second
+System Time: 2025-03-04 21:06:29,721 - Event: Machine 1 established connection with Machine 2
+System Time: 2025-03-04 21:06:29,721 - Event: Machine 1 established connection with Machine 3
+System Time: 2025-03-04 21:06:29,729 - Event: Machine 1 initialized with clock rate: 3 ticks/second
+System Time: 2025-03-04 21:06:29,730 - Event: Machine 1 initialized with clock rate: 3 ticks/second
+System Time: 2025-03-04 21:06:29,730 - Event: Machine 1 initialized with clock rate: 2 ticks/second
+System Time: 2025-03-04 21:06:29,731 - Event: Machine 1 initialized with clock rate: 6 ticks/second
+System Time: 2025-03-04 21:07:58,403 - Event: Machine 1 initialized with clock rate: 4 ticks/second
+System Time: 2025-03-04 21:07:59,408 - Event: Machine 1 established connection with Machine 2
+System Time: 2025-03-04 21:07:59,409 - Event: Machine 1 established connection with Machine 3
+System Time: 2025-03-04 21:07:59,415 - Event: Machine 1 initialized with clock rate: 5 ticks/second
+System Time: 2025-03-04 21:09:11,227 - Event: Machine 1 initialized with clock rate: 5 ticks/second
+System Time: 2025-03-04 21:09:12,235 - Event: Machine 1 established connection with Machine 2
+System Time: 2025-03-04 21:09:12,253 - Event: Machine 1 established connection with Machine 3
+System Time: 2025-03-04 21:09:12,286 - Event: Machine 1 initialized with clock rate: 1 ticks/second
+System Time: 2025-03-04 21:12:57,187 - Event: Machine 1 initialized with clock rate: 2 ticks/second
+System Time: 2025-03-04 21:12:58,193 - Event: Machine 1 established connection with Machine 2
+System Time: 2025-03-04 21:12:58,193 - Event: Machine 1 established connection with Machine 3
+System Time: 2025-03-04 21:12:58,299 - Event: Machine 1 initialized with clock rate: 6 ticks/second
+System Time: 2025-03-04 21:12:59,515 - Event: Machine 1 initialized with clock rate: 4 ticks/second
+System Time: 2025-03-04 21:12:59,618 - Event: Machine 1 initialized with clock rate: 6 ticks/second
+System Time: 2025-03-04 21:12:59,726 - Event: Machine 1 initialized with clock rate: 3 ticks/second
+System Time: 2025-03-04 21:12:59,937 - Event: Machine 1 initialized with clock rate: 6 ticks/second
+System Time: 2025-03-04 21:13:00,041 - Event: Machine 1 initialized with clock rate: 4 ticks/second
+System Time: 2025-03-04 21:13:00,148 - Event: Machine 1 initialized with clock rate: 4 ticks/second
+System Time: 2025-03-04 21:13:00,251 - Event: Machine 1 initialized with clock rate: 1 ticks/second
+System Time: 2025-03-04 21:13:16,691 - Event: Machine 1 initialized with clock rate: 5 ticks/second
+System Time: 2025-03-04 21:13:17,696 - Event: Machine 1 established connection with Machine 2
+System Time: 2025-03-04 21:13:17,697 - Event: Machine 1 established connection with Machine 3
+System Time: 2025-03-04 21:13:17,803 - Event: Machine 1 initialized with clock rate: 6 ticks/second
+System Time: 2025-03-04 21:13:19,018 - Event: Machine 1 initialized with clock rate: 6 ticks/second
+System Time: 2025-03-04 21:13:19,120 - Event: Machine 1 initialized with clock rate: 1 ticks/second
+System Time: 2025-03-04 21:13:19,227 - Event: Machine 1 initialized with clock rate: 1 ticks/second
+System Time: 2025-03-04 21:13:19,331 - Event: Machine 1 initialized with clock rate: 2 ticks/second
+System Time: 2025-03-04 21:13:19,437 - Event: Machine 1 initialized with clock rate: 2 ticks/second
+System Time: 2025-03-04 21:13:19,540 - Event: Machine 1 initialized with clock rate: 1 ticks/second
+System Time: 2025-03-04 21:13:19,647 - Event: Machine 1 initialized with clock rate: 6 ticks/second
