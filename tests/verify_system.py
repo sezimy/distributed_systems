@@ -1,4 +1,5 @@
 import re
+import os
 from collections import defaultdict
 import time
 from datetime import datetime
@@ -15,14 +16,14 @@ def verify_clock_rates():
         clock_rate = None
         
         try:
-            with open(f'machine_{machine_id}.log', 'r') as f:
+            log_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), f'machine_{machine_id}.log')
+            with open(log_path, 'r') as f:
                 for line in f:
                     if 'initialized with clock rate' in line:
                         clock_rate = int(re.search(r'clock rate: (\d+)', line).group(1))
                         print(f"Machine {machine_id} clock rate: {clock_rate} ticks/second")
                         continue
                     
-                    # Parse timestamp for events
                     match = re.search(r'System Time: ([\d-]+ [\d:,]+)', line)
                     if match and ('SENT message' in line or 'RECEIVED message' in line or 'INTERNAL EVENT' in line):
                         timestamp = parse_timestamp(match.group(1))
@@ -33,7 +34,6 @@ def verify_clock_rates():
                 print(f"WARNING: Could not find clock rate for Machine {machine_id}")
                 continue
                 
-            # Check if any second exceeds the clock rate
             violations = 0
             for second, count in events_per_second.items():
                 if count > clock_rate:
@@ -46,7 +46,7 @@ def verify_clock_rates():
                 print(f"✗ Machine {machine_id} has {violations} clock rate violations")
                 
         except FileNotFoundError:
-            print(f"WARNING: Log file for Machine {machine_id} not found")
+            print(f"WARNING: Log file for Machine {machine_id} not found at {log_path}")
 
 def verify_logical_clocks():
     """Verify logical clock properties"""
@@ -56,14 +56,13 @@ def verify_logical_clocks():
         violations = 0
         
         try:
-            with open(f'machine_{machine_id}.log', 'r') as f:
+            log_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), f'machine_{machine_id}.log')
+            with open(log_path, 'r') as f:
                 for line in f:
-                    # Extract logical clock value
                     clock_match = re.search(r'Logical Clock: (\d+)', line)
                     if clock_match:
                         clock_value = int(clock_match.group(1))
                         
-                        # Check if clock always increases
                         if clock_value < current_clock:
                             print(f"WARNING: Logical clock decreased from {current_clock} to {clock_value}")
                             violations += 1
@@ -74,7 +73,7 @@ def verify_logical_clocks():
             else:
                 print(f"✗ Machine {machine_id} has {violations} logical clock violations")
         except FileNotFoundError:
-            print(f"WARNING: Log file for Machine {machine_id} not found")
+            print(f"WARNING: Log file for Machine {machine_id} not found at {log_path}")
 
 def verify_connections():
     """Verify that all machines are properly connected"""
@@ -90,7 +89,8 @@ def verify_connections():
         accepted = set()
         
         try:
-            with open(f'machine_{machine_id}.log', 'r') as f:
+            log_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), f'machine_{machine_id}.log')
+            with open(log_path, 'r') as f:
                 for line in f:
                     if 'established connection with Machine' in line:
                         other_machine = int(re.search(r'with Machine (\d+)', line).group(1))
@@ -99,20 +99,18 @@ def verify_connections():
                         other_machine = int(re.search(r'from Machine (\d+)', line).group(1))
                         accepted.add(other_machine)
             
-            # Verify established connections
             if established == expected_connections[machine_id]:
                 print(f"✓ Machine {machine_id} established correct connections: {established}")
             else:
                 print(f"✗ Machine {machine_id} has wrong connections. Expected {expected_connections[machine_id]}, got {established}")
             
-            # Verify accepted connections
             expected_accepted = {i for i in range(1, machine_id)}
             if accepted == expected_accepted:
                 print(f"✓ Machine {machine_id} accepted correct connections: {accepted}")
             else:
                 print(f"✗ Machine {machine_id} has wrong accepted connections. Expected {expected_accepted}, got {accepted}")
         except FileNotFoundError:
-            print(f"WARNING: Log file for Machine {machine_id} not found")
+            print(f"WARNING: Log file for Machine {machine_id} not found at {log_path}")
 
 def verify_message_passing():
     """Verify message passing between machines"""
@@ -122,7 +120,8 @@ def verify_message_passing():
         received_count = 0
         
         try:
-            with open(f'machine_{machine_id}.log', 'r') as f:
+            log_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), f'machine_{machine_id}.log')
+            with open(log_path, 'r') as f:
                 for line in f:
                     if 'SENT message' in line:
                         sent_count += 1
@@ -137,7 +136,7 @@ def verify_message_passing():
             else:
                 print(f"✗ Machine {machine_id} might not be properly sending/receiving messages")
         except FileNotFoundError:
-            print(f"WARNING: Log file for Machine {machine_id} not found")
+            print(f"WARNING: Log file for Machine {machine_id} not found at {log_path}")
 
 def main():
     print("Starting system verification...\n")

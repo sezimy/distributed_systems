@@ -1,4 +1,4 @@
-# Distributed System Simulation with Logical Clocks
+# Distributed System Simulation
 
 This implementation simulates a distributed system with multiple virtual machines running at different speeds and using logical clocks for event ordering.
 
@@ -12,6 +12,8 @@ This implementation simulates a distributed system with multiple virtual machine
    - Has a message queue for incoming messages
    - Connects to other VMs via sockets
    - Logs all events to a machine-specific log file
+   - Each VM runs in its own process for true parallelism
+   - Uses threads within each process for connection and message handling
 
 2. **Event Types**
    - Internal events (random numbers 4-10)
@@ -29,12 +31,24 @@ This implementation simulates a distributed system with multiple virtual machine
 
 2. Run the simulation:
    ```bash
-   python main.py
+   python run_vm_network.py
    ```
 
-3. The simulation will create three virtual machines that communicate with each other
+3. The simulation will create three virtual machines that communicate with each other, each running in its own process
 
-4. To stop the simulation, press Ctrl+C
+4. To stop the simulation, press Ctrl+C (the system handles graceful shutdown)
+
+## Testing and Verification
+
+1. Run unit tests:
+   ```bash
+   python -m unittest tests/test_virtual_machine.py
+   ```
+
+2. Verify system behavior by analyzing logs:
+   ```bash
+   python tests/verify_system.py
+   ```
 
 ## Log Files
 
@@ -48,6 +62,8 @@ Each machine creates its own log file (machine_1.log, machine_2.log, machine_3.l
 
 - Uses TCP sockets for reliable communication
 - Implements Lamport's logical clocks
-- Each machine runs in its own thread
-- Graceful shutdown handling
+- Each machine runs in its own process (multiprocessing)
+- Uses threads within each process for connection and message handling
+- Graceful shutdown handling with signal processing
 - Random clock rates simulate different processing speeds
+- Robust error handling for network issues

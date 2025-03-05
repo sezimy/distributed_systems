@@ -1,59 +1,255 @@
-System Time: 2025-03-04 00:22:25,678 - Event: Machine 2 initialized with clock rate: 1 ticks/second
-System Time: 2025-03-04 00:22:26,686 - Event: Machine 2 accepted connection from Machine 1
-System Time: 2025-03-04 00:22:27,691 - Event: Machine 2 established connection with Machine 3
-System Time: 2025-03-04 00:22:27,691 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 1
-System Time: 2025-03-04 00:22:28,723 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 2 | Local Clock: 1, Sender Clock: 6, New Clock: 7 (Drift: 5)
-System Time: 2025-03-04 00:22:29,755 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 2 | Local Clock: 7, Sender Clock: 7, New Clock: 8 (Drift: 0)
-System Time: 2025-03-04 00:22:30,786 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 8, Sender Clock: 12, New Clock: 13 (Drift: 4)
-System Time: 2025-03-04 00:22:31,814 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 3 | Local Clock: 13, Sender Clock: 9, New Clock: 14 (Drift: 0)
-System Time: 2025-03-04 00:22:32,839 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 7 | Local Clock: 14, Sender Clock: 19, New Clock: 20 (Drift: 5)
-System Time: 2025-03-04 00:22:33,878 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 7 | Local Clock: 20, Sender Clock: 25, New Clock: 26 (Drift: 5)
-System Time: 2025-03-04 00:22:34,907 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 9 | Local Clock: 26, Sender Clock: 27, New Clock: 28 (Drift: 1)
-System Time: 2025-03-04 00:22:35,950 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 11 | Local Clock: 28, Sender Clock: 27, New Clock: 29 (Drift: 0)
-System Time: 2025-03-04 00:22:36,981 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 10 | Local Clock: 29, Sender Clock: 29, New Clock: 30 (Drift: 0)
-System Time: 2025-03-04 00:22:38,014 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 10 | Local Clock: 30, Sender Clock: 33, New Clock: 34 (Drift: 3)
-System Time: 2025-03-04 00:22:39,047 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 10 | Local Clock: 34, Sender Clock: 35, New Clock: 36 (Drift: 1)
-System Time: 2025-03-04 00:22:40,082 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 11 | Local Clock: 36, Sender Clock: 36, New Clock: 37 (Drift: 0)
-System Time: 2025-03-04 00:22:41,117 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 11 | Local Clock: 37, Sender Clock: 39, New Clock: 40 (Drift: 2)
-System Time: 2025-03-04 00:22:42,145 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 11 | Local Clock: 40, Sender Clock: 42, New Clock: 43 (Drift: 2)
-System Time: 2025-03-04 00:22:43,179 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 11 | Local Clock: 43, Sender Clock: 45, New Clock: 46 (Drift: 2)
-System Time: 2025-03-04 00:22:44,216 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 12 | Local Clock: 46, Sender Clock: 48, New Clock: 49 (Drift: 2)
-System Time: 2025-03-04 00:22:45,244 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 11 | Local Clock: 49, Sender Clock: 49, New Clock: 50 (Drift: 0)
-System Time: 2025-03-04 00:22:46,278 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 11 | Local Clock: 50, Sender Clock: 50, New Clock: 51 (Drift: 0)
-System Time: 2025-03-04 00:22:47,312 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 12 | Local Clock: 51, Sender Clock: 52, New Clock: 53 (Drift: 1)
-System Time: 2025-03-04 00:22:48,350 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 12 | Local Clock: 53, Sender Clock: 63, New Clock: 64 (Drift: 10)
-System Time: 2025-03-04 00:22:49,389 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 12 | Local Clock: 64, Sender Clock: 68, New Clock: 69 (Drift: 4)
-System Time: 2025-03-04 00:22:50,427 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 11 | Local Clock: 69, Sender Clock: 74, New Clock: 75 (Drift: 5)
-System Time: 2025-03-04 00:22:51,458 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 12 | Local Clock: 75, Sender Clock: 77, New Clock: 78 (Drift: 2)
-System Time: 2025-03-04 00:22:52,491 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 11 | Local Clock: 78, Sender Clock: 84, New Clock: 85 (Drift: 6)
-System Time: 2025-03-04 00:22:53,529 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 12 | Local Clock: 85, Sender Clock: 86, New Clock: 87 (Drift: 1)
-System Time: 2025-03-04 00:22:54,575 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 12 | Local Clock: 87, Sender Clock: 91, New Clock: 92 (Drift: 4)
-System Time: 2025-03-04 00:22:55,604 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 15 | Local Clock: 92, Sender Clock: 94, New Clock: 95 (Drift: 2)
-System Time: 2025-03-04 00:22:56,635 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 18 | Local Clock: 95, Sender Clock: 95, New Clock: 96 (Drift: 0)
-System Time: 2025-03-04 00:22:57,673 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 17 | Local Clock: 96, Sender Clock: 108, New Clock: 109 (Drift: 12)
-System Time: 2025-03-04 00:22:58,701 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 19 | Local Clock: 109, Sender Clock: 110, New Clock: 111 (Drift: 1)
-System Time: 2025-03-04 00:22:59,740 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 18 | Local Clock: 111, Sender Clock: 113, New Clock: 114 (Drift: 2)
-System Time: 2025-03-04 00:23:00,776 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 18 | Local Clock: 114, Sender Clock: 115, New Clock: 116 (Drift: 1)
-System Time: 2025-03-04 00:23:01,818 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 20 | Local Clock: 116, Sender Clock: 123, New Clock: 124 (Drift: 7)
-System Time: 2025-03-04 00:23:02,851 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 20 | Local Clock: 124, Sender Clock: 138, New Clock: 139 (Drift: 14)
-System Time: 2025-03-04 00:23:03,889 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 21 | Local Clock: 139, Sender Clock: 139, New Clock: 140 (Drift: 0)
-System Time: 2025-03-04 00:23:04,923 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 21 | Local Clock: 140, Sender Clock: 150, New Clock: 151 (Drift: 10)
-System Time: 2025-03-04 00:23:05,952 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 22 | Local Clock: 151, Sender Clock: 156, New Clock: 157 (Drift: 5)
-System Time: 2025-03-04 00:23:06,986 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 22 | Local Clock: 157, Sender Clock: 158, New Clock: 159 (Drift: 1)
-System Time: 2025-03-04 00:23:08,020 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 23 | Local Clock: 159, Sender Clock: 166, New Clock: 167 (Drift: 7)
-System Time: 2025-03-04 00:23:09,054 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 22 | Local Clock: 167, Sender Clock: 168, New Clock: 169 (Drift: 1)
-System Time: 2025-03-04 00:23:10,095 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 21 | Local Clock: 169, Sender Clock: 169, New Clock: 170 (Drift: 0)
-System Time: 2025-03-04 00:23:11,133 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 21 | Local Clock: 170, Sender Clock: 170, New Clock: 171 (Drift: 0)
-System Time: 2025-03-04 00:23:12,160 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 22 | Local Clock: 171, Sender Clock: 170, New Clock: 172 (Drift: 0)
-System Time: 2025-03-04 00:23:13,192 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 25 | Local Clock: 172, Sender Clock: 174, New Clock: 175 (Drift: 2)
-System Time: 2025-03-04 00:23:14,222 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 26 | Local Clock: 175, Sender Clock: 175, New Clock: 176 (Drift: 0)
-System Time: 2025-03-04 00:23:15,246 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 28 | Local Clock: 176, Sender Clock: 178, New Clock: 179 (Drift: 2)
-System Time: 2025-03-04 00:23:16,277 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 30 | Local Clock: 179, Sender Clock: 189, New Clock: 190 (Drift: 10)
-System Time: 2025-03-04 00:23:17,313 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 31 | Local Clock: 190, Sender Clock: 191, New Clock: 192 (Drift: 1)
-System Time: 2025-03-04 00:23:18,354 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 34 | Local Clock: 192, Sender Clock: 192, New Clock: 193 (Drift: 0)
-System Time: 2025-03-04 00:23:19,395 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 35 | Local Clock: 193, Sender Clock: 205, New Clock: 206 (Drift: 12)
-System Time: 2025-03-04 00:23:20,428 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 37 | Local Clock: 206, Sender Clock: 208, New Clock: 209 (Drift: 2)
-System Time: 2025-03-04 00:23:21,468 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 38 | Local Clock: 209, Sender Clock: 211, New Clock: 212 (Drift: 2)
-System Time: 2025-03-04 00:23:22,503 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 40 | Local Clock: 212, Sender Clock: 213, New Clock: 214 (Drift: 1)
-System Time: 2025-03-04 00:23:23,537 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 39 | Local Clock: 214, Sender Clock: 223, New Clock: 224 (Drift: 9)
-System Time: 2025-03-04 00:23:24,568 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 39 | Local Clock: 224, Sender Clock: 222, New Clock: 225 (Drift: 0)
+System Time: 2025-03-05 17:45:47,235 - Event: Machine 2 initialized with clock rate: 3 ticks/second
+System Time: 2025-03-05 17:45:47,721 - Event: Machine 2 accepted connection from Machine 1
+System Time: 2025-03-05 17:45:48,241 - Event: Machine 2 established connection with Machine 3
+System Time: 2025-03-05 17:45:48,242 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 0, Sender Clock: 2, New Clock: 3 (Drift: 2)
+System Time: 2025-03-05 17:45:48,242 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 3, Sender Clock: 4, New Clock: 5 (Drift: 1)
+System Time: 2025-03-05 17:45:48,243 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 6
+System Time: 2025-03-05 17:45:49,276 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 6, Sender Clock: 7, New Clock: 8 (Drift: 1)
+System Time: 2025-03-05 17:45:49,276 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 8, Sender Clock: 10, New Clock: 11 (Drift: 2)
+System Time: 2025-03-05 17:45:49,277 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 12
+System Time: 2025-03-05 17:45:50,306 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 12, Sender Clock: 5, New Clock: 13 (Drift: 0)
+System Time: 2025-03-05 17:45:50,306 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 13, Sender Clock: 16, New Clock: 17 (Drift: 3)
+System Time: 2025-03-05 17:45:50,306 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 18
+System Time: 2025-03-05 17:45:51,333 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 19
+System Time: 2025-03-05 17:45:51,334 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 20
+System Time: 2025-03-05 17:45:51,334 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 21
+System Time: 2025-03-05 17:45:52,358 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 21, Sender Clock: 30, New Clock: 31 (Drift: 9)
+System Time: 2025-03-05 17:45:52,358 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 32
+System Time: 2025-03-05 17:45:52,358 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 33
+System Time: 2025-03-05 17:45:53,388 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 33, Sender Clock: 32, New Clock: 34 (Drift: 0)
+System Time: 2025-03-05 17:45:53,388 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 35
+System Time: 2025-03-05 17:45:53,388 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 36
+System Time: 2025-03-05 17:45:54,422 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 0 | Local Clock: 36, Sender Clock: 30, New Clock: 37 (Drift: 0)
+System Time: 2025-03-05 17:45:54,423 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 38
+System Time: 2025-03-05 17:45:54,423 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 39
+System Time: 2025-03-05 17:45:55,453 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 39, Sender Clock: 44, New Clock: 45 (Drift: 5)
+System Time: 2025-03-05 17:45:55,453 - Event: Machine 2 SENT message to machines [3] - Logical Clock: 46
+System Time: 2025-03-05 17:45:55,454 - Event: Machine 2 SENT message to machines [3] - Logical Clock: 47
+System Time: 2025-03-05 17:45:56,483 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 47, Sender Clock: 49, New Clock: 50 (Drift: 2)
+System Time: 2025-03-05 17:45:56,484 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 50, Sender Clock: 49, New Clock: 51 (Drift: 0)
+System Time: 2025-03-05 17:45:56,484 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 51, Sender Clock: 50, New Clock: 52 (Drift: 0)
+System Time: 2025-03-05 17:45:57,509 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 2 | Local Clock: 52, Sender Clock: 55, New Clock: 56 (Drift: 3)
+System Time: 2025-03-05 17:45:57,510 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 56, Sender Clock: 57, New Clock: 58 (Drift: 1)
+System Time: 2025-03-05 17:45:57,510 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 58, Sender Clock: 60, New Clock: 61 (Drift: 2)
+System Time: 2025-03-05 17:45:58,538 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 3 | Local Clock: 61, Sender Clock: 54, New Clock: 62 (Drift: 0)
+System Time: 2025-03-05 17:45:58,539 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 62, Sender Clock: 55, New Clock: 63 (Drift: 0)
+System Time: 2025-03-05 17:45:58,540 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 63, Sender Clock: 63, New Clock: 64 (Drift: 0)
+System Time: 2025-03-05 17:45:59,566 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 64, Sender Clock: 65, New Clock: 66 (Drift: 1)
+System Time: 2025-03-05 17:45:59,567 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 0 | Local Clock: 66, Sender Clock: 58, New Clock: 67 (Drift: 0)
+System Time: 2025-03-05 17:45:59,567 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 68
+System Time: 2025-03-05 17:46:00,597 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 68, Sender Clock: 75, New Clock: 76 (Drift: 7)
+System Time: 2025-03-05 17:46:00,598 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 77
+System Time: 2025-03-05 17:46:00,598 - Event: Machine 2 SENT message to machines [3] - Logical Clock: 78
+System Time: 2025-03-05 17:46:01,629 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 78, Sender Clock: 83, New Clock: 84 (Drift: 5)
+System Time: 2025-03-05 17:46:01,629 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 85
+System Time: 2025-03-05 17:46:01,629 - Event: Machine 2 SENT message to machines [3] - Logical Clock: 86
+System Time: 2025-03-05 17:46:02,659 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 86, Sender Clock: 85, New Clock: 87 (Drift: 0)
+System Time: 2025-03-05 17:46:02,659 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 87, Sender Clock: 87, New Clock: 88 (Drift: 0)
+System Time: 2025-03-05 17:46:02,660 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 89
+System Time: 2025-03-05 17:46:03,683 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 89, Sender Clock: 90, New Clock: 91 (Drift: 1)
+System Time: 2025-03-05 17:46:03,684 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 91, Sender Clock: 92, New Clock: 93 (Drift: 1)
+System Time: 2025-03-05 17:46:03,684 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 93, Sender Clock: 92, New Clock: 94 (Drift: 0)
+System Time: 2025-03-05 17:46:04,714 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 94, Sender Clock: 97, New Clock: 98 (Drift: 3)
+System Time: 2025-03-05 17:46:04,715 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 99
+System Time: 2025-03-05 17:46:04,715 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 100
+System Time: 2025-03-05 17:46:05,755 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 100, Sender Clock: 108, New Clock: 109 (Drift: 8)
+System Time: 2025-03-05 17:46:05,756 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 110
+System Time: 2025-03-05 17:46:05,756 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 111
+System Time: 2025-03-05 17:46:06,785 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 0 | Local Clock: 111, Sender Clock: 104, New Clock: 112 (Drift: 0)
+System Time: 2025-03-05 17:46:06,786 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 113
+System Time: 2025-03-05 17:46:06,786 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 114
+System Time: 2025-03-05 17:46:07,823 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 115
+System Time: 2025-03-05 17:46:07,824 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 116
+System Time: 2025-03-05 17:46:07,824 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 117
+System Time: 2025-03-05 17:46:08,865 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 117, Sender Clock: 123, New Clock: 124 (Drift: 6)
+System Time: 2025-03-05 17:46:08,865 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 124, Sender Clock: 125, New Clock: 126 (Drift: 1)
+System Time: 2025-03-05 17:46:08,866 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 127
+System Time: 2025-03-05 17:46:09,903 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 127, Sender Clock: 129, New Clock: 130 (Drift: 2)
+System Time: 2025-03-05 17:46:09,904 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 130, Sender Clock: 130, New Clock: 131 (Drift: 0)
+System Time: 2025-03-05 17:46:09,904 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 132
+System Time: 2025-03-05 17:46:10,943 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 0 | Local Clock: 132, Sender Clock: 124, New Clock: 133 (Drift: 0)
+System Time: 2025-03-05 17:46:10,943 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 134
+System Time: 2025-03-05 17:46:10,943 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 135
+System Time: 2025-03-05 17:46:11,975 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 135, Sender Clock: 140, New Clock: 141 (Drift: 5)
+System Time: 2025-03-05 17:46:11,976 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 142
+System Time: 2025-03-05 17:46:11,976 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 143
+System Time: 2025-03-05 17:46:13,003 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 143, Sender Clock: 130, New Clock: 144 (Drift: 0)
+System Time: 2025-03-05 17:46:13,003 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 144, Sender Clock: 147, New Clock: 148 (Drift: 3)
+System Time: 2025-03-05 17:46:13,003 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 148, Sender Clock: 149, New Clock: 150 (Drift: 1)
+System Time: 2025-03-05 17:46:14,045 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 0 | Local Clock: 150, Sender Clock: 132, New Clock: 151 (Drift: 0)
+System Time: 2025-03-05 17:46:14,045 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 152
+System Time: 2025-03-05 17:46:14,045 - Event: Machine 2 SENT message to machines [3] - Logical Clock: 153
+System Time: 2025-03-05 17:46:15,083 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 153, Sender Clock: 161, New Clock: 162 (Drift: 8)
+System Time: 2025-03-05 17:46:15,083 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 163
+System Time: 2025-03-05 17:46:15,084 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 164
+System Time: 2025-03-05 17:46:16,112 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 164, Sender Clock: 164, New Clock: 165 (Drift: 0)
+System Time: 2025-03-05 17:46:16,113 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 165, Sender Clock: 167, New Clock: 168 (Drift: 2)
+System Time: 2025-03-05 17:46:16,113 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 169
+System Time: 2025-03-05 17:46:17,141 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 169, Sender Clock: 161, New Clock: 170 (Drift: 0)
+System Time: 2025-03-05 17:46:17,144 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 170, Sender Clock: 171, New Clock: 172 (Drift: 1)
+System Time: 2025-03-05 17:46:17,145 - Event: Machine 2 SENT message to machines [3] - Logical Clock: 173
+System Time: 2025-03-05 17:46:18,189 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 173, Sender Clock: 179, New Clock: 180 (Drift: 6)
+System Time: 2025-03-05 17:46:18,190 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 180, Sender Clock: 180, New Clock: 181 (Drift: 0)
+System Time: 2025-03-05 17:46:18,190 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 182
+System Time: 2025-03-05 17:46:19,227 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 182, Sender Clock: 185, New Clock: 186 (Drift: 3)
+System Time: 2025-03-05 17:46:19,228 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 186, Sender Clock: 187, New Clock: 188 (Drift: 1)
+System Time: 2025-03-05 17:46:19,228 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 189
+System Time: 2025-03-05 17:46:20,259 - Event: Machine 2 SENT message to machines [3] - Logical Clock: 190
+System Time: 2025-03-05 17:46:20,259 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 191
+System Time: 2025-03-05 17:46:20,259 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 192
+System Time: 2025-03-05 17:46:21,295 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 192, Sender Clock: 196, New Clock: 197 (Drift: 4)
+System Time: 2025-03-05 17:46:21,296 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 198
+System Time: 2025-03-05 17:46:21,296 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 199
+System Time: 2025-03-05 17:46:22,334 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 199, Sender Clock: 196, New Clock: 200 (Drift: 0)
+System Time: 2025-03-05 17:46:22,334 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 200, Sender Clock: 203, New Clock: 204 (Drift: 3)
+System Time: 2025-03-05 17:46:22,334 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 204, Sender Clock: 204, New Clock: 205 (Drift: 0)
+System Time: 2025-03-05 17:46:23,368 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 205, Sender Clock: 197, New Clock: 206 (Drift: 0)
+System Time: 2025-03-05 17:46:23,369 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 206, Sender Clock: 211, New Clock: 212 (Drift: 5)
+System Time: 2025-03-05 17:46:23,369 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 213
+System Time: 2025-03-05 17:46:24,405 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 214
+System Time: 2025-03-05 17:46:24,405 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 215
+System Time: 2025-03-05 17:46:24,405 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 216
+System Time: 2025-03-05 17:46:25,433 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 4 | Local Clock: 216, Sender Clock: 203, New Clock: 217 (Drift: 0)
+System Time: 2025-03-05 17:46:25,433 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 3 | Local Clock: 217, Sender Clock: 221, New Clock: 222 (Drift: 4)
+System Time: 2025-03-05 17:46:25,433 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 2 | Local Clock: 222, Sender Clock: 222, New Clock: 223 (Drift: 0)
+System Time: 2025-03-05 17:46:26,467 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 3 | Local Clock: 223, Sender Clock: 223, New Clock: 224 (Drift: 0)
+System Time: 2025-03-05 17:46:26,467 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 2 | Local Clock: 224, Sender Clock: 224, New Clock: 225 (Drift: 0)
+System Time: 2025-03-05 17:46:26,467 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 225, Sender Clock: 207, New Clock: 226 (Drift: 0)
+System Time: 2025-03-05 17:46:27,505 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 226, Sender Clock: 228, New Clock: 229 (Drift: 2)
+System Time: 2025-03-05 17:46:27,506 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 230
+System Time: 2025-03-05 17:46:27,506 - Event: Machine 2 SENT message to machines [3] - Logical Clock: 231
+System Time: 2025-03-05 17:46:28,538 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 231, Sender Clock: 242, New Clock: 243 (Drift: 11)
+System Time: 2025-03-05 17:46:28,539 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 243, Sender Clock: 243, New Clock: 244 (Drift: 0)
+System Time: 2025-03-05 17:46:28,539 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 245
+System Time: 2025-03-05 17:46:29,572 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 0 | Local Clock: 245, Sender Clock: 235, New Clock: 246 (Drift: 0)
+System Time: 2025-03-05 17:46:29,572 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 247
+System Time: 2025-03-05 17:46:29,572 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 248
+System Time: 2025-03-05 17:46:30,613 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 248, Sender Clock: 254, New Clock: 255 (Drift: 6)
+System Time: 2025-03-05 17:46:30,614 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 256
+System Time: 2025-03-05 17:46:30,614 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 257
+System Time: 2025-03-05 17:46:31,653 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 257, Sender Clock: 259, New Clock: 260 (Drift: 2)
+System Time: 2025-03-05 17:46:31,653 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 260, Sender Clock: 260, New Clock: 261 (Drift: 0)
+System Time: 2025-03-05 17:46:31,653 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 262
+System Time: 2025-03-05 17:46:32,692 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 262, Sender Clock: 260, New Clock: 263 (Drift: 0)
+System Time: 2025-03-05 17:46:32,692 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 263, Sender Clock: 263, New Clock: 264 (Drift: 0)
+System Time: 2025-03-05 17:46:32,692 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 264, Sender Clock: 267, New Clock: 268 (Drift: 3)
+System Time: 2025-03-05 17:46:33,722 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 269
+System Time: 2025-03-05 17:46:33,723 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 270
+System Time: 2025-03-05 17:46:33,723 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 271
+System Time: 2025-03-05 17:46:34,748 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 271, Sender Clock: 279, New Clock: 280 (Drift: 8)
+System Time: 2025-03-05 17:46:34,749 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 281
+System Time: 2025-03-05 17:46:34,749 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 282
+System Time: 2025-03-05 17:46:35,787 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 282, Sender Clock: 285, New Clock: 286 (Drift: 3)
+System Time: 2025-03-05 17:46:35,788 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 287
+System Time: 2025-03-05 17:46:35,788 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 288
+System Time: 2025-03-05 17:46:36,823 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 288, Sender Clock: 277, New Clock: 289 (Drift: 0)
+System Time: 2025-03-05 17:46:36,823 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 289, Sender Clock: 292, New Clock: 293 (Drift: 3)
+System Time: 2025-03-05 17:46:36,824 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 293, Sender Clock: 294, New Clock: 295 (Drift: 1)
+System Time: 2025-03-05 17:46:37,847 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 295, Sender Clock: 280, New Clock: 296 (Drift: 0)
+System Time: 2025-03-05 17:46:37,848 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 296, Sender Clock: 281, New Clock: 297 (Drift: 0)
+System Time: 2025-03-05 17:46:37,848 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 297, Sender Clock: 295, New Clock: 298 (Drift: 0)
+System Time: 2025-03-05 17:46:38,888 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 298, Sender Clock: 283, New Clock: 299 (Drift: 0)
+System Time: 2025-03-05 17:46:38,889 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 299, Sender Clock: 284, New Clock: 300 (Drift: 0)
+System Time: 2025-03-05 17:46:38,889 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 300, Sender Clock: 304, New Clock: 305 (Drift: 4)
+System Time: 2025-03-05 17:46:39,921 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 305, Sender Clock: 286, New Clock: 306 (Drift: 0)
+System Time: 2025-03-05 17:46:39,921 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 306, Sender Clock: 311, New Clock: 312 (Drift: 5)
+System Time: 2025-03-05 17:46:39,922 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 313
+System Time: 2025-03-05 17:46:40,959 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 0 | Local Clock: 313, Sender Clock: 289, New Clock: 314 (Drift: 0)
+System Time: 2025-03-05 17:46:40,959 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 315
+System Time: 2025-03-05 17:46:40,960 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 316
+System Time: 2025-03-05 17:46:41,999 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 316, Sender Clock: 321, New Clock: 322 (Drift: 5)
+System Time: 2025-03-05 17:46:42,000 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 322, Sender Clock: 322, New Clock: 323 (Drift: 0)
+System Time: 2025-03-05 17:46:42,001 - Event: Machine 2 SENT message to machines [3] - Logical Clock: 324
+System Time: 2025-03-05 17:46:43,037 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 324, Sender Clock: 327, New Clock: 328 (Drift: 3)
+System Time: 2025-03-05 17:46:43,038 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 329
+System Time: 2025-03-05 17:46:43,038 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 330
+System Time: 2025-03-05 17:46:44,064 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 330, Sender Clock: 334, New Clock: 335 (Drift: 4)
+System Time: 2025-03-05 17:46:44,065 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 336
+System Time: 2025-03-05 17:46:44,065 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 337
+System Time: 2025-03-05 17:46:45,100 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 337, Sender Clock: 340, New Clock: 341 (Drift: 3)
+System Time: 2025-03-05 17:46:45,101 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 341, Sender Clock: 341, New Clock: 342 (Drift: 0)
+System Time: 2025-03-05 17:46:45,101 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 343
+System Time: 2025-03-05 17:46:46,135 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 344
+System Time: 2025-03-05 17:46:46,136 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 345
+System Time: 2025-03-05 17:46:46,136 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 346
+System Time: 2025-03-05 17:46:47,158 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 0 | Local Clock: 346, Sender Clock: 339, New Clock: 347 (Drift: 0)
+System Time: 2025-03-05 17:46:47,158 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 348
+System Time: 2025-03-05 17:46:47,158 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 349
+System Time: 2025-03-05 17:46:48,188 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 0 | Local Clock: 349, Sender Clock: 341, New Clock: 350 (Drift: 0)
+System Time: 2025-03-05 17:46:48,188 - Event: Machine 2 SENT message to machines [3] - Logical Clock: 351
+System Time: 2025-03-05 17:46:48,188 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 352
+System Time: 2025-03-05 17:46:49,232 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 352, Sender Clock: 364, New Clock: 365 (Drift: 12)
+System Time: 2025-03-05 17:46:49,233 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 366
+System Time: 2025-03-05 17:46:49,233 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 367
+System Time: 2025-03-05 17:46:50,269 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 0 | Local Clock: 367, Sender Clock: 355, New Clock: 368 (Drift: 0)
+System Time: 2025-03-05 17:46:50,269 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 369
+System Time: 2025-03-05 17:46:50,269 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 370
+System Time: 2025-03-05 17:46:51,297 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 370, Sender Clock: 358, New Clock: 371 (Drift: 0)
+System Time: 2025-03-05 17:46:51,298 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 371, Sender Clock: 377, New Clock: 378 (Drift: 6)
+System Time: 2025-03-05 17:46:51,298 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 379
+System Time: 2025-03-05 17:46:52,332 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 380
+System Time: 2025-03-05 17:46:52,332 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 381
+System Time: 2025-03-05 17:46:52,332 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 382
+System Time: 2025-03-05 17:46:53,358 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 382, Sender Clock: 389, New Clock: 390 (Drift: 7)
+System Time: 2025-03-05 17:46:53,358 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 390, Sender Clock: 391, New Clock: 392 (Drift: 1)
+System Time: 2025-03-05 17:46:53,359 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 393
+System Time: 2025-03-05 17:46:54,394 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 393, Sender Clock: 399, New Clock: 400 (Drift: 6)
+System Time: 2025-03-05 17:46:54,394 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 401
+System Time: 2025-03-05 17:46:54,394 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 402
+System Time: 2025-03-05 17:46:55,432 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 402, Sender Clock: 404, New Clock: 405 (Drift: 2)
+System Time: 2025-03-05 17:46:55,432 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 406
+System Time: 2025-03-05 17:46:55,433 - Event: Machine 2 SENT message to machines [3] - Logical Clock: 407
+System Time: 2025-03-05 17:46:56,458 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 407, Sender Clock: 408, New Clock: 409 (Drift: 1)
+System Time: 2025-03-05 17:46:56,459 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 410
+System Time: 2025-03-05 17:46:56,459 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 411
+System Time: 2025-03-05 17:46:57,494 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 411, Sender Clock: 412, New Clock: 413 (Drift: 1)
+System Time: 2025-03-05 17:46:57,495 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 413, Sender Clock: 414, New Clock: 415 (Drift: 1)
+System Time: 2025-03-05 17:46:57,495 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 416
+System Time: 2025-03-05 17:46:58,525 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 416, Sender Clock: 414, New Clock: 417 (Drift: 0)
+System Time: 2025-03-05 17:46:58,525 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 417, Sender Clock: 415, New Clock: 418 (Drift: 0)
+System Time: 2025-03-05 17:46:58,525 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 418, Sender Clock: 422, New Clock: 423 (Drift: 4)
+System Time: 2025-03-05 17:46:59,570 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 423, Sender Clock: 417, New Clock: 424 (Drift: 0)
+System Time: 2025-03-05 17:46:59,570 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 424, Sender Clock: 425, New Clock: 426 (Drift: 1)
+System Time: 2025-03-05 17:46:59,570 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 426, Sender Clock: 426, New Clock: 427 (Drift: 0)
+System Time: 2025-03-05 17:47:00,599 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 427, Sender Clock: 432, New Clock: 433 (Drift: 5)
+System Time: 2025-03-05 17:47:00,599 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 433, Sender Clock: 433, New Clock: 434 (Drift: 0)
+System Time: 2025-03-05 17:47:00,600 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 435
+System Time: 2025-03-05 17:47:01,637 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 435, Sender Clock: 423, New Clock: 436 (Drift: 0)
+System Time: 2025-03-05 17:47:01,638 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 436, Sender Clock: 439, New Clock: 440 (Drift: 3)
+System Time: 2025-03-05 17:47:01,638 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 441
+System Time: 2025-03-05 17:47:02,674 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 3 | Local Clock: 441, Sender Clock: 428, New Clock: 442 (Drift: 0)
+System Time: 2025-03-05 17:47:02,675 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 2 | Local Clock: 442, Sender Clock: 444, New Clock: 445 (Drift: 2)
+System Time: 2025-03-05 17:47:02,675 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 445, Sender Clock: 445, New Clock: 446 (Drift: 0)
+System Time: 2025-03-05 17:47:03,706 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 2 | Local Clock: 446, Sender Clock: 446, New Clock: 447 (Drift: 0)
+System Time: 2025-03-05 17:47:03,707 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 447, Sender Clock: 451, New Clock: 452 (Drift: 4)
+System Time: 2025-03-05 17:47:03,707 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 452, Sender Clock: 453, New Clock: 454 (Drift: 1)
+System Time: 2025-03-05 17:47:04,734 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 2 | Local Clock: 454, Sender Clock: 432, New Clock: 455 (Drift: 0)
+System Time: 2025-03-05 17:47:04,734 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 455, Sender Clock: 434, New Clock: 456 (Drift: 0)
+System Time: 2025-03-05 17:47:04,734 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 456, Sender Clock: 458, New Clock: 459 (Drift: 2)
+System Time: 2025-03-05 17:47:05,752 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 2 | Local Clock: 459, Sender Clock: 463, New Clock: 464 (Drift: 4)
+System Time: 2025-03-05 17:47:05,752 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 464, Sender Clock: 464, New Clock: 465 (Drift: 0)
+System Time: 2025-03-05 17:47:05,752 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 465, Sender Clock: 465, New Clock: 466 (Drift: 0)
+System Time: 2025-03-05 17:47:06,787 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 0 | Local Clock: 466, Sender Clock: 439, New Clock: 467 (Drift: 0)
+System Time: 2025-03-05 17:47:06,788 - Event: Machine 2 SENT message to machines [1] - Logical Clock: 468
+System Time: 2025-03-05 17:47:06,788 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 469
+System Time: 2025-03-05 17:47:07,812 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 469, Sender Clock: 473, New Clock: 474 (Drift: 4)
+System Time: 2025-03-05 17:47:07,812 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 474, Sender Clock: 477, New Clock: 478 (Drift: 3)
+System Time: 2025-03-05 17:47:07,812 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 479
+System Time: 2025-03-05 17:47:08,859 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 479, Sender Clock: 485, New Clock: 486 (Drift: 6)
+System Time: 2025-03-05 17:47:08,859 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 487
+System Time: 2025-03-05 17:47:08,859 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 488
+System Time: 2025-03-05 17:47:09,878 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 488, Sender Clock: 483, New Clock: 489 (Drift: 0)
+System Time: 2025-03-05 17:47:09,878 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 489, Sender Clock: 486, New Clock: 490 (Drift: 0)
+System Time: 2025-03-05 17:47:09,878 - Event: Machine 2 SENT message to machines [1, 3] - Logical Clock: 491
+System Time: 2025-03-05 17:47:10,911 - Event: Machine 2 RECEIVED message from Machine 3| Queue Length: 1 | Local Clock: 491, Sender Clock: 494, New Clock: 495 (Drift: 3)
+System Time: 2025-03-05 17:47:10,911 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 495, Sender Clock: 493, New Clock: 496 (Drift: 0)
+System Time: 2025-03-05 17:47:10,911 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 497
+System Time: 2025-03-05 17:47:11,940 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 497, Sender Clock: 503, New Clock: 504 (Drift: 6)
+System Time: 2025-03-05 17:47:11,941 - Event: Machine 2 SENT message to machines [3] - Logical Clock: 505
+System Time: 2025-03-05 17:47:11,941 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 506
+System Time: 2025-03-05 17:47:12,974 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 506, Sender Clock: 504, New Clock: 507 (Drift: 0)
+System Time: 2025-03-05 17:47:12,974 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 508
+System Time: 2025-03-05 17:47:12,974 - Event: Machine 2 INTERNAL EVENT - Logical Clock: 509
+System Time: 2025-03-05 17:47:14,006 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 2 | Local Clock: 509, Sender Clock: 512, New Clock: 513 (Drift: 3)
+System Time: 2025-03-05 17:47:14,006 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 1 | Local Clock: 513, Sender Clock: 513, New Clock: 514 (Drift: 0)
+System Time: 2025-03-05 17:47:14,006 - Event: Machine 2 RECEIVED message from Machine 1| Queue Length: 0 | Local Clock: 514, Sender Clock: 515, New Clock: 516 (Drift: 1)
