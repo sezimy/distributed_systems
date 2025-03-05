@@ -57,3 +57,34 @@ Each machine creates its own log file (machine_1.log, machine_2.log, machine_3.l
 - Event type (internal, send, receive)
 - Message queue length (for receive events)
 - Logical clock value
+
+## Environment Variable Configuration
+
+The system is configured using environment variables, making it easy to adjust parameters without modifying code.
+
+You can print their current values using the following command:
+```bash
+python run_vm_network.py --show-config
+```
+
+### Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `VM_NUM_MACHINES` | Number of virtual machines to create | 3 |
+| `VM_BASE_PORT` | Starting port number (each VM uses base_port + id) | 5000 |
+| `VM_HOST` | Host address for socket connections | localhost |
+| `VM_MIN_CLOCK_RATE` | Minimum clock rate (ticks per second) | 1 |
+| `VM_MAX_CLOCK_RATE` | Maximum clock rate (ticks per second) | 6 |
+| `VM_MAX_RETRIES` | Maximum connection retry attempts | 5 |
+| `VM_RETRY_DELAY` | Initial delay between retry attempts (seconds) | 1.0 |
+| `VM_STARTUP_BASE_DELAY` | Base delay for VM startup (seconds) | 1.0 |
+| `VM_STARTUP_PER_MACHINE_FACTOR` | Additional delay factor per machine ID | 0.5 |
+| `VM_INTERNAL_EVENT_MIN` | Minimum value for internal event range | 4 |
+| `VM_INTERNAL_EVENT_MAX` | Maximum value for internal event range | 10 |
+| `VM_SEND_TO_ONE_VALUE` | Event value for sending to first machine | 1 |
+| `VM_SEND_TO_OTHER_VALUE` | Event value for sending to second machine | 2 |
+| `VM_SEND_TO_BOTH_VALUE` | Event value for sending to all machines | 3 |
+| `VM_LOG_DIRECTORY` | Directory for log files | logs |
+| `VM_LOG_LEVEL` | Logging level (INFO, DEBUG, etc.) | INFO |
+| `VM_LOG_FORMAT` | Format string for log messages | System Time: %(asctime)s - Event: %(message)s |

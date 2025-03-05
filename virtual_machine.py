@@ -10,14 +10,24 @@ import os
 from datetime import datetime
 from typing import List, Dict
 
+# Import the environment variable configuration
+from env_config import (
+    get_num_machines, get_base_port, get_host,
+    get_clock_rate_range, get_max_retries, get_retry_delay,
+    get_startup_base_delay, get_startup_per_machine_factor, get_event_ranges, 
+    get_log_directory, get_log_level, get_log_format
+)
+
 class VirtualMachine:
     def __init__(self, machine_id: int, port: int, other_ports: List[int]):
         self.machine_id = machine_id
         self.port = port
         self.other_ports = other_ports
+        self.host = get_host()
         
-        # Initialize clock rate (1-6 ticks per second)
-        self.clock_rate = random.randint(1, 6)
+        # Initialize clock rate based on configured range
+        min_rate, max_rate = get_clock_rate_range()
+        self.clock_rate = random.randint(min_rate, max_rate)
         self.last_tick_time = time.time()
         self.instruction_counter = 0
         
@@ -51,8 +61,11 @@ class VirtualMachine:
         # Flags for control
         self.running = True
     
-    def _initialize_socket(self, max_retries=5, retry_delay=1):
+    def _initialize_socket(self, max_retries=None, retry_delay=None):
         """Initialize socket with proper cleanup and reuse options, with retry mechanism"""
+        max_retries = max_retries or get_max_retries()
+        retry_delay = retry_delay or get_retry_delay()
+        
         for attempt in range(max_retries):
             try:
                 # Create a new socket
@@ -67,7 +80,7 @@ class VirtualMachine:
                 self.socket.settimeout(10)
                 
                 # Try to bind to the port
-                self.socket.bind(('localhost', self.port))
+                self.socket.bind((self.host, self.port))
                 self.socket.listen(5)
                 
                 # Reset timeout to blocking mode for normal operation
@@ -96,17 +109,20 @@ class VirtualMachine:
         
     def setup_logging(self):
         """Setup logging configuration for the virtual machine"""
-        log_filename = f'machine_{self.machine_id}.log'
+        log_dir = get_log_directory()
+        os.makedirs(log_dir, exist_ok=True)
+        log_filename = os.path.join(log_dir, f'machine_{self.machine_id}.log')
+        
         # Create a logger specific to this machine
         self.logger = logging.getLogger(f'machine_{self.machine_id}')
-        self.logger.setLevel(logging.INFO)
+        self.logger.setLevel(get_log_level())
         
         # Create file handler
         file_handler = logging.FileHandler(log_filename)
-        file_handler.setLevel(logging.INFO)
+        file_handler.setLevel(get_log_level())
         
         # Create formatter
-        formatter = logging.Formatter('System Time: %(asctime)s - Event: %(message)s')
+        formatter = logging.Formatter(get_log_format())
         file_handler.setFormatter(formatter)
         
         # Clear any existing handlers and add our file handler
@@ -119,45 +135,49 @@ class VirtualMachine:
     def connect_to_others(self):
         """Establish connections with other virtual machines"""
         # Wait longer to ensure all machines are listening
-        # This delay is proportional to the machine ID to stagger connection attempts
-        startup_delay = 1 + (0.5 * self.machine_id)
+        # Higher machine IDs wait less time since they start later
+        base_delay = get_startup_base_delay()
+        per_machine_factor = get_startup_per_machine_factor()
+        
+        startup_delay = base_delay + (per_machine_factor * self.machine_id)
         print(f"Machine {self.machine_id} waiting {startup_delay:.1f}s before connecting to others...")
         time.sleep(startup_delay)
         
-        # Only initiate connections to machines with higher port numbers
+        # Connect to machines with higher port numbers
         for other_port in self.other_ports:
             if other_port > self.port:
                 # Try to connect with retries
-                max_retries = 5
-                retry_delay = 1
+                max_retries = get_max_retries()
+                retry_delay = get_retry_delay()
                 connected = False
                 
                 for attempt in range(max_retries):
                     try:
                         client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                         client_socket.settimeout(5)  # Set a timeout for the connection attempt
-                        client_socket.connect(('localhost', other_port))
+                        client_socket.connect((self.host, other_port))
                         # Send our identification with a newline separator
                         client_socket.sendall(f"CONNECT {self.port}\n".encode())
                         client_socket.settimeout(None)  # Reset to blocking mode
+                        
                         self.connections[other_port] = client_socket
-                        connecting_machine_id = self.port_to_machine_id[other_port]
-                        self.logger.info(f"Machine {self.machine_id} established connection with Machine {connecting_machine_id}")
-                        print(f"Machine {self.machine_id} established connection with Machine {connecting_machine_id}")
-                        # Start message handling thread for this connection
-                        threading.Thread(target=self.handle_incoming_messages, args=(client_socket,), daemon=True).start()
+                        other_id = self.port_to_machine_id[other_port]
+                        self.logger.info(f"Machine {self.machine_id} connected to Machine {other_id}")
+                        print(f"Machine {self.machine_id} connected to Machine {other_id}")
                         connected = True
                         break
                     except Exception as e:
                         if attempt < max_retries - 1:
-                            print(f"Attempt {attempt+1}/{max_retries} to connect to port {other_port} failed: {e}. Retrying in {retry_delay}s...")
+                            print(f"Connection attempt {attempt+1} to port {other_port} failed: {e}. Retrying in {retry_delay}s...")
                             time.sleep(retry_delay)
+                            # Increase retry delay for exponential backoff
+                            retry_delay *= 2
                         else:
-                            print(f"Failed to connect to port {other_port}: {e}")
+                            self.logger.error(f"Failed to connect to port {other_port} after {max_retries} attempts: {e}")
                 
                 if not connected:
-                    self.logger.warning(f"Machine {self.machine_id} failed to connect to port {other_port} after {max_retries} attempts")
-    
+                    print(f"Machine {self.machine_id} failed to connect to port {other_port}")
+
     def accept_connections(self):
         """Accept connections from other virtual machines"""
         self.socket.listen(5)
@@ -254,17 +274,35 @@ class VirtualMachine:
             )
         except queue.Empty:
             # No message in queue, generate random event
+            event_ranges = get_event_ranges()
+            internal_range = event_ranges.get('internal', [4, 10])
+            send_to_one = event_ranges.get('send_to_one')
+            send_to_other = event_ranges.get('send_to_other')
+            send_to_both = event_ranges.get('send_to_both')
+            
             action = random.randint(1, 10)
-            if 1 <= action <= 3:
-                # Send message cases
-                target_ports = []
-                if action == 1:
-                    target_ports = [self.other_ports[0]]
-                elif action == 2:
-                    target_ports = [self.other_ports[1]]
-                elif action == 3:
-                    target_ports = self.other_ports
-
+            
+            if action == send_to_one and len(self.other_ports) > 0:
+                # Send to first machine
+                target_ports = [sorted(self.other_ports)[0]]
+                self.update_logical_clock()
+                self.send_message(target_ports)
+                target_machines = [self.port_to_machine_id[port] for port in target_ports]
+                self.logger.info(
+                    f"Machine {self.machine_id} SENT message to machines {target_machines} - Logical Clock: {self.logical_clock}"
+                )
+            elif action == send_to_other and len(self.other_ports) > 1:
+                # Send to second machine
+                target_ports = [sorted(self.other_ports)[1]]
+                self.update_logical_clock()
+                self.send_message(target_ports)
+                target_machines = [self.port_to_machine_id[port] for port in target_ports]
+                self.logger.info(
+                    f"Machine {self.machine_id} SENT message to machines {target_machines} - Logical Clock: {self.logical_clock}"
+                )
+            elif action == send_to_both and len(self.other_ports) > 0:
+                # Send to all machines
+                target_ports = self.other_ports
                 self.update_logical_clock()
                 self.send_message(target_ports)
                 target_machines = [self.port_to_machine_id[port] for port in target_ports]
@@ -325,42 +363,36 @@ class VirtualMachine:
             self.socket.close()
         except:
             pass
+        
+        self.logger.info("Virtual machine stopped")
 
 # Function to run a virtual machine in a separate process
 def run_vm_process(machine_id, port, other_ports):
     try:
         # Calculate a startup delay based on machine ID
         # Lower IDs will start listening sooner, higher IDs will wait longer before connecting
-        startup_delay = 1.0 * machine_id
+        base_delay = get_startup_base_delay()
+        startup_delay = base_delay * machine_id
         time.sleep(startup_delay)
         
         vm = VirtualMachine(machine_id, port, other_ports)
-        try:
-            vm.run()
-        except KeyboardInterrupt:
-            print(f"VM {machine_id} stopping...")
-        finally:
-            vm.stop()
+        print(f"Starting VM {machine_id} on port {port}")
+        vm.run()
+    except KeyboardInterrupt:
+        print(f"VM {machine_id} received keyboard interrupt, shutting down")
     except Exception as e:
         print(f"Error starting VM {machine_id} on port {port}: {e}")
 
 # Function to create and start multiple virtual machines as separate processes
-def create_virtual_machine_network(num_machines=3, base_port=5000):
+def create_virtual_machine_network(num_machines=None, base_port=None):
+    # Use environment variable values if not specified
+    num_machines = num_machines or get_num_machines()
+    base_port = base_port or get_base_port()
+    
     processes = []
     ports = [base_port + i for i in range(num_machines)]
     
-    # First, try to clean up any processes that might be using these ports
-    if os.name == 'posix':  # Unix-like systems
-        for port in ports:
-            try:
-                os.system(f"lsof -ti :{port} | xargs kill -9 2>/dev/null")
-                time.sleep(0.5)  # Give time for the process to be killed
-            except:
-                pass
-    
     # Start processes in reverse order (highest machine_id first)
-    # This ensures that higher-numbered machines are ready to accept connections
-    # when lower-numbered machines try to connect to them
     for i in reversed(range(num_machines)):
         machine_id = i + 1
         port = ports[i]
@@ -368,17 +400,9 @@ def create_virtual_machine_network(num_machines=3, base_port=5000):
         
         process = mp.Process(
             target=run_vm_process,
-            args=(machine_id, port, other_ports),
-            name=f"VM-{machine_id}"
+            args=(machine_id, port, other_ports)
         )
-        processes.append(process)
-        process.daemon = True
         process.start()
-        print(f"Started VM {machine_id} on port {port} as process {process.pid}")
-        # Add a delay between starting processes
-        time.sleep(0.5)
-    
-    # Reverse the process list so it's in ascending machine_id order (for consistency)
-    processes.reverse()
+        processes.append(process)
     
     return processes
