@@ -241,10 +241,10 @@ class TestVirtualMachine(unittest.TestCase):
         self.assertGreater(processed, 0, "No messages were processed")
         self.assertGreaterEqual(self.vm.logical_clock, 0, "Logical clock was not updated")
 
-    @patch('multiprocessing.Process')
+    @patch('virtual_machine.mp.Process')
     def test_create_virtual_machine_network(self, mock_process):
         """Test creation of a virtual machine network with processes."""
-        # Configure the mock process
+        # Set up the mock process
         mock_process_instance = MagicMock()
         mock_process.return_value = mock_process_instance
         
@@ -257,9 +257,12 @@ class TestVirtualMachine(unittest.TestCase):
         self.assertEqual(mock_process_instance.start.call_count, num_machines)
         
         # Verify that the processes were configured with the correct arguments
+        # Note: VMs are now created in reverse order (from highest ID to lowest)
         for i in range(num_machines):
             args = mock_process.call_args_list[i][1]
-            self.assertEqual(args['name'], f"VM-{i+1}")
+            # The VM ID should be num_machines - i (reversed order)
+            expected_vm_id = num_machines - i
+            self.assertEqual(args['name'], f"VM-{expected_vm_id}")
             self.assertEqual(args['target'], run_vm_process)
 
 if __name__ == '__main__':
